@@ -6,12 +6,16 @@ var DinnerOverviewView= function (container, model) {
 	
 
 	var loadOverview= function(){
+
+		//It loads the number of guest on the screen
 		numberOfGuestsScreen.html("<p>My Dinner: "+model.getNumberOfGuests()+" People</p>");
+
+		//It gets from the model the information of the dishes selected for the menu
 		var dishList = model.getFullMenu();
 		var dishCost = model.getMenuPriceByRecipe();
 		var totalCost= model.getTotalMenuPrice();
-		//load all the menu on the screen	
 
+		//It load all the menu on the screen	
 		for(var i=0; i<dishList.length; i++){
 		dishPictureScreen.append("<div class='col-md-4'><div class='thumbnail'>"+
 									"<img src='images/"+dishList[i].image+
@@ -22,9 +26,11 @@ var DinnerOverviewView= function (container, model) {
 								"</div>");	
 		}	
 
+		//It loads the total cost of the menu on the screen
 		costScreen.html("<p>Total: "+totalCost+"</p>");
 
 	}
 
+	//Load all the information stored on the model on the screen
 	loadOverview();
 }

@@ -5,6 +5,8 @@ var SelectDishView= function (container, model) {
 
 	var loadDishes= function(){
 
+		//Get all the dishes by the type of course and loads on the screen 
+		//ATTENTION: Modify to get the information of the dropbox menu
 		var dishesByType= model.getAllDishes("main dish");
 		
 			for(var i=0; i<dishesByType.length; i++){
@@ -21,4 +23,5 @@ var SelectDishView= function (container, model) {
 	}
 
 	loadDishes();
+
 }

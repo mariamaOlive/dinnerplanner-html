@@ -5,9 +5,13 @@ var DinnerPreparationView= function (container, model) {
 	
 
 	var loadPreparation= function(){
+		//It loads the number of guest on the screen
 		numberOfGuestsScreen.html("<p>My Dinner: "+model.getNumberOfGuests()+" People</p>");
+
+		//It gets from the model the information of the dishes selected for the menu
 		var dishList = model.getFullMenu();
-		//load all the menu on the screen
+
+		//it loads all the menu on the screen
 		for(var i=0; i<dishList.length; i++ ){
 			dishInfoScreen.append("<div class='row'><div class='col-md-3' id='dish-image'>\
 					                   	<img src='images/"+dishList[i].image+"' class='img-responsive' alt='Responsive image' id='dish-image'>\
@@ -23,5 +27,6 @@ var DinnerPreparationView= function (container, model) {
 		}
 	}
 
+	//It load on the screen all the information of the preparation of a dish
 	loadPreparation();
 }

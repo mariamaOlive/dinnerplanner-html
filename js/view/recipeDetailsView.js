@@ -29,7 +29,8 @@ var RecipeDetailsView= function (container, model) {
 
 		//This code loads the content of the left layout related to the ingredients of the recipe
 		numberOfGuestsScreen.html("<p><h5>INGREDIENTS FOR "+model.getNumberOfGuests()+" PEOPLE</h5></p>");
-		//load recipe ingredients
+		
+		//it loads recipe ingredients
 		for(key in dishIngredients){
 
 			totalCost+=dishIngredients[key].price;
