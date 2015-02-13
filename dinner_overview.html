@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+    <link rel='stylesheet' type='text/css' href='stylesheet_dinner_overview.css'/>
 
   </head>
   <body>
@@ -18,18 +18,47 @@
 				<span id="subtitle">From the best chefs in the world directly into your kichen</span>
 		  	</p>
 	  	</div>
-	<div class="container">
+
+
+	<div class="container-fluid" id="container1">
 			<div class="row">
-				<div class="col-md-7" id="left-info">
-					<h2>A Home Dinner Service</h>
-					<hr>
-					<p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co. Constare efficiat de re credamus.</p>
-					<p id="little-text">Start quickly</p>
-					<button class="btn btn-default" type="button">Create new dinner</button>
+				<div class="col-md-9" id="numberGuests">	
 				</div>
-				<div class="col-md-5"></div>
+
+				<div class="col-md-3">
+
+
+                    <button type="button" class="btn btn-default">Go back and edit dinner</button>
+				</div>
 			</div>
+
 	</div>
+
+
+	<div class="container-fluid" id="container2">
+		<div class="cost">
+			<div class="row">
+
+				<div class="col-md-3"></div>
+
+				<div class="col-md-6" id="dishes">				
+				</div>
+
+				<div class="col-md-3" id="total-cost">
+	            </div>
+	            <div class="verticalLine">
+	            </div>
+		</div>
+	</div>
+		
+</div>
+  <div class="container-fluid">
+            <div class="col-md-12" id="print">
+            	<hr>
+                    <button type="button" class="btn btn-default">Print Full Recipe
+                    </button>
+			</div>
+  </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -39,7 +68,7 @@
 	<!-- The application JavaScript code -->
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
+	<script src="js/view/dinnerOverviewView.js"></script>
   </body>
 </html>
