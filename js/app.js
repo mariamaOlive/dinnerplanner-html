@@ -9,7 +9,8 @@ $(function() {
 	//var dinnerPreaparationView= new DinnerPreparationView($("#dinnerPreparation"), model);
 	//var dinnerOverviewView= new DinnerOverviewView($("#dinnerOverview"), model);
 	//var recipeDetailsView= new RecipeDetailsView($("#recipeDetails"), model);
-    //test comment
+    //test 
+    //hahafish branch
 	//Instanciating the controllers
 	var numberGuestsCtrl =  new NumberGuestsCtrl(numberGuestsView, model);
 
