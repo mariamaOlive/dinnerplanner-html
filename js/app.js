@@ -14,5 +14,6 @@ $(function() {
 	//HAHAFISH 
 	//it mariama here
 	var numberGuestsCtrl =  new NumberGuestsCtrl(numberGuestsView, model);
+	var selectDishCtrl= new SelectDishCtrl(selectDishView,model);
 
 });

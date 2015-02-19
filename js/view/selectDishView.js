@@ -2,6 +2,9 @@
 var SelectDishView= function (container, model) {
 	
 	var dishesOptions = container.find("#dishesOptions");
+	this.dropdownMenu = container.find(".dropdown");
+
+
 
 	var loadDishes= function(){
 
