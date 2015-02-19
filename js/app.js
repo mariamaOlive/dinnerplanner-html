@@ -11,6 +11,7 @@ $(function() {
 	//var recipeDetailsView= new RecipeDetailsView($("#recipeDetails"), model);
     //test comment
 	//Instanciating the controllers
+	//HAHAFISH 
 	//it mariama here
 	var numberGuestsCtrl =  new NumberGuestsCtrl(numberGuestsView, model);
 
