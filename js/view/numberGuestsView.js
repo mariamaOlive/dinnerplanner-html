@@ -1,14 +1,16 @@
 var NumberGuestsView= function (container, model) {
 	
-	var numberOfGuestsScreen = container.find("#numberOfGuests");
-	var dishListScreen= container.find("#dishList");
+	this.dishListScreen= container.find("#dishList");
 	var costListScreen= container.find("#costList");
 	var finalCostScreen= container.find("#finalCost");
-	var numberOfGuests= model.getNumberOfGuests();
+	var numberOfGuestsScreen = container.find("#numberOfGuests");
+	this.minusButton= container.find("#minusGuest");
+	this.plusButton= container.find("#plusGuest");
+
 
 	//it loads on the screen the number of guests
 	var loadNumberGuests= function(){
-		
+				numberOfGuests= model.getNumberOfGuests();
 				numberOfGuestsScreen.html(numberOfGuests);
 	}
 
@@ -17,6 +19,7 @@ var NumberGuestsView= function (container, model) {
 
 		var dishList = model.getFullMenu();
 		var priceList= model.getMenuPriceByRecipe();
+
 
 		for(var i=0; i<dishList.length; i++){
 
@@ -30,6 +33,12 @@ var NumberGuestsView= function (container, model) {
 		finalCostScreen.html("<p id='finalCostText'>"+model.getTotalMenuPrice()+"</p>");
 	}
 
-	loadNumberGuests();
-	loadListDishes();
+	this.update= function(){
+		loadNumberGuests();
+		loadListDishes();
+	}
+
+	model.addObserver(this);
+	numberOfGuests= model.setNumberOfGuests(0);
+
 }

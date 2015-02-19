@@ -4,10 +4,13 @@ $(function() {
 	
 	//And create the needed controllers and views
 	//var exampleView = new ExampleView($("#exampleView"),model);
-	//var selectDishView = new SelectDishView($("body"),model);
-	var numberGestsView =  new NumberGuestsView($("body"),model);
-	//var dinnerPreaparationView= new DinnerPreparationView($("body"), model);
-	//var dinnerOverviewView= new DinnerOverviewView($("body"), model);
-	var recipeDetailsView= new RecipeDetailsView($("body"), model);
+	var selectDishView = new SelectDishView($("body"),model);
+	var numberGuestsView =  new NumberGuestsView($("body"),model);
+	//var dinnerPreaparationView= new DinnerPreparationView($("#dinnerPreparation"), model);
+	//var dinnerOverviewView= new DinnerOverviewView($("#dinnerOverview"), model);
+	//var recipeDetailsView= new RecipeDetailsView($("#recipeDetails"), model);
+
+	//Instanciating the controllers
+	var numberGuestsCtrl =  new NumberGuestsCtrl(numberGuestsView, model);
 
 });
