@@ -3,15 +3,19 @@ var SelectDishView= function (container, model) {
 	
 	var dishesOptions = container.find("#dishesOptions");
 	this.dropdownMenu = container.find(".dropdown");
+	this.searchBox =  container.find("#searchBox");
 
 
 
-	this.loadDishes= function(dishType){
+	this.loadDishes= function(dishType, text){
 
 		//Get all the dishes by the type of course and loads on the screen 
-		//ATTENTION: Modify to get the information of the dropbox menu
-		var dishesByType= model.getAllDishes(dishType);
-
+		var dishesByType;
+		if (text===""){
+			dishesByType= model.getAllDishes(dishType);
+		}else{
+			dishesByType= model.getAllDishes(dishType, text);
+		}
 		dishesOptions.html("");
 		
 			for(var i=0; i<dishesByType.length; i++){
