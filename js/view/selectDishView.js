@@ -1,7 +1,7 @@
 //ExampleView Object constructor
 var SelectDishView= function (container, model) {
 	
-	var dishesOptions = container.find("#dishesOptions");
+	this.dishesOptions = container.find("#dishesOptions");
 	this.dropdownMenu = container.find(".dropdown");
 	this.searchBox =  container.find("#searchBox");
 
@@ -19,7 +19,7 @@ var SelectDishView= function (container, model) {
 		dishesOptions.html("");
 		
 			for(var i=0; i<dishesByType.length; i++){
-				dishesOptions.append( "<div class='col-md-3'>\
+				dishesOptions.append( "<div class='col-md-3' id='dishes'>\
 								<div class='thumbnail'>\
 							      <img src=images/"+dishesByType[i].image+ 
 							      "><div class='caption'>\
