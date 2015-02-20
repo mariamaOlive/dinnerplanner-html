@@ -29,4 +29,5 @@ var DinnerPreparationView= function (container, model) {
 
 	//It load on the screen all the information of the preparation of a dish
 	loadPreparation();
+	container.hide();
 }

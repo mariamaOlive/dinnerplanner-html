@@ -32,5 +32,5 @@ var DinnerOverviewView= function (container, model) {
 	}
 
 	//Load all the information stored on the model on the screen
-	loadOverview();
+	container.hide();
 }

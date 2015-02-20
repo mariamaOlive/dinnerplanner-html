@@ -40,5 +40,6 @@ var SelectDishView= function (container, model) {
 
 	//model.addObserver(this);
 	this.loadDishes("starter");
+	container.hide();
 
 }

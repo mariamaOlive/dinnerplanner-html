@@ -9,6 +9,8 @@ var RecipeDetailsView= function (container, model) {
 	var dishPreparation= container.find("#dishPreparation");
 	this.btnConfirm =  container.find("#confirm-btn");
 	this.idDish;
+
+
 	
 
 	var loadRecipeDetails= function(id){
@@ -50,6 +52,7 @@ var RecipeDetailsView= function (container, model) {
 	}
 
 	loadRecipeDetails(1);
+	container.hide();
 }
 
 
