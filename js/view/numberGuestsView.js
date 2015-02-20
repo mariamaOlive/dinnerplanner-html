@@ -38,6 +38,7 @@ var NumberGuestsView= function (container, model) {
 		loadListDishes();
 	}
 
+	//First time that the view is initialised add an observer and set the number of guest to 0
 	model.addObserver(this);
 	numberOfGuests= model.setNumberOfGuests(0);
 
