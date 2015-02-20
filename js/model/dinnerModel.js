@@ -149,7 +149,7 @@ var DinnerModel = function() {
 
 	//method triggered when a dish is selected from the selectDish page
 	this.setDishId= function(id){
-		this.dishId= id;
+		dishId= id;
 		this.notifyObservers();
 	}
 
