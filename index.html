@@ -1,45 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dinner planner</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dinner planner</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel='stylesheet' type='text/css' href='stylesheet.css'/>
 
-  </head>
-  <body id="bodyHome">
-	  	<div id="headerHome">
+</head>
+
+<body>
+	<!--page home-->
+	
+	<div id="pageHome">
+		<div id="headerHome">
 			<p>
-		  		<span id="title">HOMELETTE</span>
+				<span id="title">HOMELETTE</span>
 				<span id="subtitle">From the best chefs in the world directly into your kichen</span>
-		  	</p>
-	  	</div>
-	<div class="container">
+			</p>
+		</div>
+		<div class="container">
 			<div class="row">
 				<div class="col-md-7" id="left-info">
 					<h2>A Home Dinner Service</h>
-					<hr>
-					<p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co. Constare efficiat de re credamus.</p>
-					<p id="little-text">Start quickly</p>
-					<button class="btn btn-default" type="button" id="btnCreate">Create new dinner</button>
+						<hr>
+						<p>Se ex veris utili modos sitas haben velim ne. Aliam ima pla hac aut porro fingi opera. To concipio persuasi imponere perfecta ac lectorum in co. Constare efficiat de re credamus.</p>
+						<p id="little-text">Start quickly</p>
+						<button class="btn btn-default" type="button" id="btnCreate">Create new dinner</button>
+					</div>
+					<div class="col-md-5"></div>
 				</div>
-				<div class="col-md-5"></div>
 			</div>
-	</div>
+		</div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
-	<!-- The application JavaScript code -->
-	<script src="js/app.js"></script>
-	<script src="js/model/dinnerModel.js"></script>
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
-  </body>
-</html>
+		<!--selectDish page-->
+		<div id="pageSelectDish">
+			<div id="header">
+				<p>
+					<span id="title">HOMELETTE</span>
+					<span id="subtitle">From the best chefs in the world directly into your kichen</span>
+				</p>
+			</div>
+			<div class="middle">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3" id="left-cost">
+							<div id="guests">
+								<h4>My Dinner</h4>
+								<div>
+									People:
+									<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+									<span id="numberOfGuests">X</span>
+									<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+								</div>
+							</div>
+							<div id="nameCost">
+								<p  class="dishName">Dish Name</p>
+								<p  class="cost">Cost</p>
+							</div>
+							<div>
+								<div class="row">
+									<div class="col-xs-9" id="dishList">
+									</div>
+									<div class="col-xs-3" id="costList">
+									</div>
+								</div>
+								<hr>
+								<div id="finalCost">
+								</div>
+								<button class="btn btn-default" type="button" id="btnConfirm">Confirm Dinner</button>
+							</div>
+						</div>
+						<div class="col-md-9" id="right-info">
+							<div class="search">
+								<p>SELECT DISH</p>
+								<hr>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="input-group" id="searchBox">
+											<input type="text" class="form-control" placeholder="Enter key words">
+											<span class="input-group-btn">
+												<button class="btn btn-default" type="button" id="btnSearch">search</button>
+											</span>
+										</div><!-- /input-group -->
+									</div>
+									<div class="col-md-4">
+										<div class="dropdown">
+											<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">starter<span class="caret"></span></button>
+
+											<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+												<li role="presentation"><a role="menuitem" tabindex="1" href="#">starter</a></li>
+												<li role="presentation"><a role="menuitem" tabindex="2" href="#">main dish</a></li>
+												<li role="presentation"><a role="menuitem" tabindex="3" href="#">dessert</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Div resposible for showing the available dishes-->
+							<div id="dishesOptions" class="row">
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+
+
+
+		<!--page dinner preparation-->
+		<div id="pageDinnerPreparation">
+			<div id="header">
+				<p>
+					<span id="title">HOMELETTE</span>
+					<span id="subtitle">From the best chefs in the world directly into your kichen</span>
+				</p>
+			</div>
+
+
+			<div class="container-fluid" id="container1">
+				<div class="row">
+					<div class="col-md-9" id="numberGuests">
+					</div>
+
+					<div class="col-md-3">
+						<button type="button" class="btn btn-default">Go back and edit dinner</button>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="container-fluid" id="container2">
+				<div id="dishInfo">
+				</div>	
+			</div>
+
+		</div>
+
+
+		<!-- page dinner overview-->
+		<div id="pageDinnerOverview">
+			<div id="header">
+				<p>
+					<span id="title">HOMELETTE</span>
+					<span id="subtitle">From the best chefs in the world directly into your kichen</span>
+				</p>
+			</div>
+
+
+			<div class="container-fluid" id="container1">
+				<div class="row">
+					<div class="col-md-9" id="numberGuests">	
+					</div>
+
+					<div class="col-md-3">
+
+
+						<button type="button" class="btn btn-default">Go back and edit dinner</button>
+					</div>
+				</div>
+
+			</div>
+
+
+			<div class="container-fluid" id="container2">
+				<div class="costdish" id="costDish">
+					<div class="row">
+
+						<div class="col-md-3"></div>
+
+						<div class="col-md-6" id="dishes">				
+						</div>
+
+						<div class="col-md-3" id="total-cost">
+						</div>
+						<div class="verticalLine">
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="container-fluid">
+				<div class="col-md-12" id="print">
+					<hr>
+					<button type="button" class="btn btn-default">Print Full Recipe
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+		<!--page recipe Details-->
+		<div id="pageRecipeDetails">
+			<div id="header">
+				<p>
+					<span id="title">HOMELETTE</span>
+					<span id="subtitle">From the best chefs in the world directly into your kichen</span>
+				</p>
+			</div>
+			<div class="middle">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3" id="left-cost">
+							<div id="guests">
+								<h4>My Dinner</h4>
+								<div>
+									People:
+									<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+									<span id="numberOfGuests">X</span>
+									<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+								</div>
+							</div>
+							<div id="nameCost">
+								<p  class="dishName">Dish Name</p>
+								<p  class="cost">Cost</p>
+							</div>
+							<div>
+								<div class="row">
+									<div class="col-xs-9" id="dishList">
+									</div>
+									<div class="col-xs-3" id="costList">
+									</div>
+								</div>
+								<hr>
+								<div id="finalCost">
+								</div>
+								<button class="btn btn-default" type="button">Confirm Dinner</button>
+							</div>
+						</div>
+						<div class="col-md-9" id="right-info">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="title" id="dish-name">
+										<!--Div resposible for showing the name of the selected dish-->
+									</div>
+									<div class="image" id="dish-image">
+										<!--Div resposible for showing the picture of the selected dish-->
+									</div>
+									<div class="intro" id="dish-intro">
+										<!--Div resposible for showing the description of the selected dish-->
+									</div>
+									<div class="button">
+										<button class="btn btn-default" type="button" id="back-btn">back to Select Dish</button>      
+									</div>
+									<div id="dishPreparation">
+										<h3>Preparation</h3>
+									</div>
+								</div>
+								<div class="col-md-6" id="ingredients">
+									<div class="title" id="title-list">
+									</div>
+									<hr>
+									<div class="list" id="ingre-list">
+									</div>
+									<hr>
+									<div class="row" id="total-cost">
+										<div class="col-md-8">
+											<div class="button">
+												<button class="btn btn-default" type="button" id="confirm-btn">Confirm Dish</button>
+											</div>
+
+										</div>
+										<div class="col-md-2">SEK</div>
+										<div class="col-md-2" id="total-costNumber"></div>
+									</div>
+								</div>
+							</div>
+
+							<div id="dishesOptions" class="row">
+								<!--Div resposible for showing the available dishes-->
+							</div>
+						</div>
+					</div>		
+				</div>
+			</div>
+		</div>
+
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+		<!-- The application JavaScript code -->
+		<script src="js/app.js"></script>
+		<script src="js/model/dinnerModel.js"></script>
+		<script src="js/view/exampleView.js"></script>
+		<script src="js/view/exampleViewController.js"></script>
+
+
+	</body>
+	</html>
