@@ -3,7 +3,9 @@ var RecipeDetailsCtrl = function(view, model){
     
     confirmBtn.click(function(){
 
-    	model.addDishToMenu(view.idDish);
+
+    	//var idDish=view.idDish; make this work when connect the selectDish page and recipeDetailPage
+    	model.addDishToMenu(1);
     	
     });
 

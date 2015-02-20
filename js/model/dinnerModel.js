@@ -5,6 +5,7 @@ var DinnerModel = function() {
 	// and selected dinner options for dinner menu
 	var numberOfGuests;
 	var menu = [];
+	var dishId;
 	
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
@@ -146,6 +147,16 @@ var DinnerModel = function() {
 		this.notifyObservers();
 	}
 
+	//method triggered when a dish is selected from the selectDish page
+	this.setDishId= function(id){
+		this.dishId= id;
+		this.notifyObservers();
+	}
+
+	this.getDishId= function(){
+		return dishId;
+	}
+
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
@@ -182,6 +193,7 @@ var DinnerModel = function() {
 			_observer[key].update();
 		}
 	}
+
 
 
 

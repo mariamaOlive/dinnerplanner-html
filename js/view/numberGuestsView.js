@@ -1,6 +1,6 @@
 var NumberGuestsView= function (container, model) {
 	
-	this.dishListScreen= container.find("#dishList");
+	var dishListScreen= container.find("#dishList");
 	var costListScreen= container.find("#costList");
 	var finalCostScreen= container.find("#finalCost");
 	var numberOfGuestsScreen = container.find("#numberOfGuests");
@@ -19,6 +19,9 @@ var NumberGuestsView= function (container, model) {
 
 		var dishList = model.getFullMenu();
 		var priceList= model.getMenuPriceByRecipe();
+
+		dishListScreen.html("");
+		costListScreen.html("");
 
 
 		for(var i=0; i<dishList.length; i++){

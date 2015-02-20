@@ -18,5 +18,6 @@ var searchBoxText= view.searchBox.find(".form-control");
 		view.loadDishes(dishType, text);
 	});
 
+	//Implement the action later of selecting the dish and call the function model.setIdDish();
 
 };

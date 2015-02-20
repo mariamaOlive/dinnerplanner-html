@@ -13,7 +13,7 @@ var RecipeDetailsView= function (container, model) {
 
 	var loadRecipeDetails= function(id){
 
-		this.idDish=id;
+		idDish=id;
 		var dish= model.getDish(id);
 		var dishIngredients= dish.ingredients;
 		var totalCost=0;
