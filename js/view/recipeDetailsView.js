@@ -51,7 +51,12 @@ var RecipeDetailsView= function (container, model) {
 		costScreen.html(totalCost);
 	}
 
-	loadRecipeDetails(1);
+	var update = function(){
+		loadRecipeDetails(model.getDishId);
+	}
+
+	//Adding the observer resposible for determing which dish is show the details
+	model.addObserver(this);
 	container.hide();
 }
 

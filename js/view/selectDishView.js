@@ -4,6 +4,7 @@ var SelectDishView= function (container, model) {
 	this.dishesOptions = container.find("#dishesOptions");
 	this.dropdownMenu = container.find(".dropdown");
 	this.searchBox =  container.find("#searchBox");
+	this.nextPage= container.parent().find("#dinnerDetails")
 
 
 
