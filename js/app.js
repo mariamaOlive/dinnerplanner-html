@@ -3,17 +3,15 @@ $(function() {
 	var model = new DinnerModel();
 	
 	//And create the needed controllers and views
-	//var exampleView = new ExampleView($("#exampleView"),model);
-	//var selectDishView = new SelectDishView($("body"),model);
-	//var numberGuestsView =  new NumberGuestsView($("body"),model);
-	var dinnerPreaparationView= new DinnerPreparationView($("#dinnerPreparation"), model);
-	//var dinnerOverviewView= new DinnerOverviewView($("#dinnerOverview"), model);
-	//var recipeDetailsView= new RecipeDetailsView($("#recipeDetails"), model);
-    //test comment
-	//Instanciating the controllers
-	//HAHAFISH 
-	//it mariama here
-	//var numberGuestsCtrl =  new NumberGuestsCtrl(numberGuestsView, model);
-	//var selectDishCtrl= new SelectDishCtrl(selectDishView,model);
+	//views
+	var selectDishView = new SelectDishView($("#pageSelectDish"),model);
+	var numberGuestsView =  new NumberGuestsView($("#pageSelectDish"),model);
+	var dinnerPreaparationView= new DinnerPreparationView($("#pageDinnerPreparation"), model);
+	var dinnerOverviewView= new DinnerOverviewView($("#pageDinnerOverview"), model);
+	var recipeDetailsView= new RecipeDetailsView($("#pageRecipeDetails"), model);
+
+	//controllers
+	var numberGuestsCtrl =  new NumberGuestsCtrl(numberGuestsView, model);
+	var selectDishCtrl= new SelectDishCtrl(selectDishView,model);
 
 });
