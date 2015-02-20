@@ -1,15 +1,17 @@
-#bodyHome{
+body{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+#pageHome{
 
 	background-image: url("images/background_picture.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	z-index: -1;
 }
-body{
-	background-size: 100%;
-	background-repeat: no-repeat;
-	z-index: -1;
-}
+
 #headerHome{
 	z-index: 1;
 	width: 100%;
@@ -53,7 +55,7 @@ body{
 #subtitle{
 	font-size: 20px;
 	font-style: oblique;
-		font-family: Georgia, Times, serif;
+	font-family: Georgia, Times, serif;
 	color: #383838;
 }
 .container{
@@ -69,16 +71,16 @@ body{
 	margin-left: 0px;
 	height: 80px;
 	background: #FFCC66;
-    border-bottom: solid 1px;
-    border-color: #888;
-    padding-top: 25px;
-    padding-right: 2%; 
+	border-bottom: solid 1px;
+	border-color: #888;
+	padding-top: 25px;
+	padding-right: 2%; 
 }
 #container2{
 	margin-left: 0px;
 	height: 250px;
-    padding-top: 25px;
-    padding-right: 2%; 
+	padding-top: 25px;
+	padding-right: 2%; 
 
 }
 #print{
@@ -94,12 +96,12 @@ body{
 
 hr{
 	display: block;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 1px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
 }
 
 #left-info p{
@@ -163,13 +165,13 @@ hr{
 	padding-top: 5px;
 	padding-right: 30px;
 	float: right;
-		
+	
 }
 #costDish{
 	height: 250px;
 }
 #dishesOptions{
-padding-top: 25px;
+	padding-top: 25px;
 }
 #finalCostText{
 	text-align: right;
@@ -190,15 +192,15 @@ padding-top: 25px;
 	height: 80px;
 }
 #dish-image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
 }
 #back-btn{
 	background-color: #FF9933;
 	margin-left: 0px;
-    margin-top: 20px;
+	margin-top: 20px;
 }
 #ingredients{
 	background-color: #FFCC66;
