@@ -16,10 +16,10 @@ var SelectDishView= function (container, model) {
 		}else{
 			dishesByType= model.getAllDishes(dishType, text);
 		}
-		dishesOptions.html("");
+		this.dishesOptions.html("");
 		
 			for(var i=0; i<dishesByType.length; i++){
-				dishesOptions.append( "<div class='col-md-3' id='dishes'>\
+				this.dishesOptions.append( "<div class='col-md-3' id='dishes'>\
 								<div class='thumbnail'>\
 							      <img src=images/"+dishesByType[i].image+ 
 							      "><div class='caption'>\
