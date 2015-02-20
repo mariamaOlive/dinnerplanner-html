@@ -7,11 +7,14 @@ var RecipeDetailsView= function (container, model) {
 	var dishPicture=container.find("#dish-image");
 	var dishDescription = container.find("#dish-intro");
 	var dishPreparation= container.find("#dishPreparation");
+	this.btnConfirm =  container.find("#confirm-btn");
+	this.idDish;
 	
 
 	var loadRecipeDetails= function(id){
-		
-		var dish= model.getDish(1);
+
+		this.idDish=id;
+		var dish= model.getDish(id);
 		var dishIngredients= dish.ingredients;
 		var totalCost=0;
 
@@ -46,7 +49,7 @@ var RecipeDetailsView= function (container, model) {
 		costScreen.html(totalCost);
 	}
 
-	loadRecipeDetails();
+	loadRecipeDetails(1);
 }
 
 
