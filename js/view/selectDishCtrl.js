@@ -3,6 +3,7 @@ var dropdownList = view.dropdownMenu.find(".dropdown-menu li a");
 var dropdownText = view.dropdownMenu.find(".btn");
 var searchBoxButton=  view.searchBox.find("#btnSearch");
 var searchBoxText= view.searchBox.find(".form-control");
+var dishesOptions= view.dishesOptions.find("#dishes");
 
 
 	
@@ -19,5 +20,7 @@ var searchBoxText= view.searchBox.find(".form-control");
 	});
 
 	//Implement the action later of selecting the dish and call the function model.setIdDish();
+
+	//dishesOptions.click(function)
 
 };
