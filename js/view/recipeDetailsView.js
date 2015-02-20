@@ -9,7 +9,8 @@ var RecipeDetailsView= function (container, model) {
 	var dishPreparation= container.find("#dishPreparation");
 	this.btnConfirm =  container.find("#confirm-btn");
 	this.idDish;
-
+	this.container=container;
+	this.nextPage=container.parent().find("#pageSelectDish");
 
 	
 
@@ -30,7 +31,7 @@ var RecipeDetailsView= function (container, model) {
 		dishDescription.html("<p>"+dish.description+"</p>");
 
 		//It loads the recipe preparation
-		dishPreparation.append("<p>"+dish.description+"</p>");
+		dishPreparation.html("<h3>Preparation</h3><p>"+dish.description+"</p>");
 
 		//This code loads the content of the left layout related to the ingredients of the recipe
 		numberOfGuestsScreen.html("<p><h5>INGREDIENTS FOR "+model.getNumberOfGuests()+" PEOPLE</h5></p>");
@@ -39,6 +40,7 @@ var RecipeDetailsView= function (container, model) {
 		for(key in dishIngredients){
 
 			totalCost+=dishIngredients[key].price;
+			dishIngredientsScreen.html("");
 			dishIngredientsScreen.append("<div class='row' id='dish-list'>"+
 											"<div class='col-md-3'>"+dishIngredients[key].quantity+" "+dishIngredients[key].unit+"</div>"+
 											"<div class='col-md-5'>"+dishIngredients[key].name+"</div>"+

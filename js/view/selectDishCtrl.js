@@ -3,7 +3,8 @@ var dropdownList = view.dropdownMenu.find(".dropdown-menu li a");
 var dropdownText = view.dropdownMenu.find(".btn");
 var searchBoxButton=  view.searchBox.find("#btnSearch");
 var searchBoxText= view.searchBox.find(".form-control");
-var dishesOptions= view.dishesOptions.find("div.thumbnail");
+var dishesOptions=  view.dishesOptionsBtn;
+
 
 
 	

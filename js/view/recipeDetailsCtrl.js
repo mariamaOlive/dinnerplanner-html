@@ -6,7 +6,9 @@ var RecipeDetailsCtrl = function(view, model){
 
     	//var idDish=view.idDish; make this work when connect the selectDish page and recipeDetailPage
     	model.addDishToMenu(1);
-    	
+
+    	view.container.hide();
+    	view.nextPage.show();
     });
 
 }

@@ -6,6 +6,7 @@ var SelectDishView= function (container, model) {
 	this.searchBox =  container.find("#searchBox");
 	this.container=container;
 	this.nextPage= container.parent().find("#pageRecipeDetails");
+	this.dishesOptionsBtn;
 
 
 
@@ -32,6 +33,8 @@ var SelectDishView= function (container, model) {
 							    </div>");
 
 			}
+
+		this.dishesOptionsBtn= container.find("div.thumbnail");
 	
 
 	}
