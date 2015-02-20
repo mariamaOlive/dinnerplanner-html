@@ -10,8 +10,10 @@ $(function() {
 	var dinnerOverviewView= new DinnerOverviewView($("#pageDinnerOverview"), model);
 	var recipeDetailsView= new RecipeDetailsView($("#pageRecipeDetails"), model);
 
+
 	//controllers
 	var numberGuestsCtrl =  new NumberGuestsCtrl(numberGuestsView, model);
 	var selectDishCtrl= new SelectDishCtrl(selectDishView,model);
+	var receipeDetailsCtrl= new RecipeDetailsCtrl(recipeDetailsView,model);
 
 });
