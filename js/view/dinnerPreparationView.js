@@ -12,6 +12,7 @@ var DinnerPreparationView= function (container, model) {
 		var dishList = model.getFullMenu();
 
 		//it loads all the menu on the screen
+		dishInfoScreen.html("");
 		for(var i=0; i<dishList.length; i++ ){
 			dishInfoScreen.append("<div class='row'><div class='col-md-3' id='dish-image'>\
 					                   	<img src='images/"+dishList[i].image+"' class='img-responsive' alt='Responsive image' id='dish-image'>\

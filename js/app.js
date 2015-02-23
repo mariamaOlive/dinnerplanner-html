@@ -16,5 +16,6 @@ $(function() {
 	var numberGuestsCtrl =  new NumberGuestsCtrl(numberGuestsView, model);
 	var selectDishCtrl= new SelectDishCtrl(selectDishView,model);
 	var receipeDetailsCtrl= new RecipeDetailsCtrl(recipeDetailsView,model);
+	var dinnerOverviewCtrl= new DinnerOverviewCtrl(dinnerOverviewView,model);
 
 });

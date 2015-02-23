@@ -6,8 +6,8 @@ var DinnerOverviewView= function (container, model) {
 	this.container=container;
 	this.nextPage= container.parent().find("#pageDinnerPreparation");
 	this.backPage=container.parent().find("#pageSelectDish");
-	this.goBackBtn= container.find().("#backBtn");
-	this.printBtn=container.find().("#printBtn");
+	this.goBackBtn= container.find("#backBtn");
+	this.printBtn=container.find("#printBtn");
 	
 
 	var loadOverview= function(){
@@ -21,6 +21,7 @@ var DinnerOverviewView= function (container, model) {
 		var totalCost= model.getTotalMenuPrice();
 
 		//It load all the menu on the screen	
+		dishPictureScreen.html("");
 		for(var i=0; i<dishList.length; i++){
 		dishPictureScreen.append("<div class='col-md-4'><div class='thumbnail'>"+
 									"<img src='images/"+dishList[i].image+
