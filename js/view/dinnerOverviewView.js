@@ -3,6 +3,11 @@ var DinnerOverviewView= function (container, model) {
 	var numberOfGuestsScreen = container.find("#numberGuests");
 	var dishPictureScreen= container.find("#dishes");
 	var costScreen=container.find("#total-cost");
+	this.container=container;
+	this.nextPage= container.parent().find("#pageDinnerPreparation");
+	this.backPage=container.parent().find("#pageSelectDish");
+	this.goBackBtn= container.find().("#backBtn");
+	this.printBtn=container.find().("#printBtn");
 	
 
 	var loadOverview= function(){
@@ -31,6 +36,12 @@ var DinnerOverviewView= function (container, model) {
 
 	}
 
+
+	this.update = function(){
+		loadOverview();
+	}
+	//Adding the observer resposible for determing which dish is shown in the overview
+	model.addObserver(this);
 	//Load all the information stored on the model on the screen
 	container.hide();
 }
