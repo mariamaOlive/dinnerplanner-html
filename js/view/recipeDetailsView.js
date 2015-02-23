@@ -12,6 +12,7 @@ var RecipeDetailsView= function (container, model) {
 	this.idDish;
 	this.container=container;
 	this.nextPage=container.parent().find("#selectDishList");
+	
 
 	
 

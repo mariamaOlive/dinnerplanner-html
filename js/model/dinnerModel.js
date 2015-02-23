@@ -177,6 +177,7 @@ var DinnerModel = function() {
 
 	this.setListStatus = function(status){
 		pedingDish=status;
+		this.notifyObservers();
 	}
 
 

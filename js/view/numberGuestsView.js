@@ -39,17 +39,22 @@ var NumberGuestsView= function (container, model) {
 		}
 
 		var valuePending;
+		var btn=container.find("#btnConfirm");
 		
 		//Resolve the situation if a dish is selected but it is still pending 
 		if(model.getListStatus()){
 			//if it is still pending in recipeDetail page
 			var dishId=model.getDishId();
 			valuePending=model.getPriceByRecipe(dishId)*model.getNumberOfGuests();
+
+			//Disabling the button of confirmingDinner
+			btn.prop('disabled', true);
 			
 		}else{
 			//back to the dishList 
 			valuePending=0;
-
+			//Enabling the button of confirmingDinner
+			btn.prop('disabled', false);
 		}
 
 		//Pending values inserted in the html tree
@@ -60,6 +65,8 @@ var NumberGuestsView= function (container, model) {
 		var totalCost=model.getTotalMenuPrice()+valuePending;
 		//Final cost of the dinner
 		finalCostScreen.html("<p id='finalCostText'>SEK "+totalCost+"</p>");
+
+
 	}
 
 	this.update= function(){
