@@ -1,4 +1,4 @@
-var DinnerPreparationView= function (container, model) {
+var DinnerPreparationCtrl= function (container, model) {
 
 
 var backBtn=view.backBtn;
