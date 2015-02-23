@@ -1,6 +1,6 @@
 
 var NumberGuestsCtrl= function(view, model){
-var confirmBtn=confirmBtn;
+var confirmBtn=view.confirmBtn;
 	//Handling the event of adding a guest
 	view.plusButton.click(function(){
 	 model.setNumberOfGuests(model.getNumberOfGuests() + 1);
