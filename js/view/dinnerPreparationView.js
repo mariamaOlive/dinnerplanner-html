@@ -2,6 +2,9 @@ var DinnerPreparationView= function (container, model) {
 	
 	var numberOfGuestsScreen = container.find("#numberGuests");
 	var dishInfoScreen= container.find("#dishInfo");
+	this.backBtn= container.find("#backEditButton");
+	this.container=container;
+	this.nextPage= container.parent().find("#pageSelectDish");
 	
 
 	var loadPreparation= function(){
