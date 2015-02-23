@@ -1,3 +1,4 @@
+var confirmBtn=confirmBtn;
 var NumberGuestsCtrl= function(view, model){
 
 	//Handling the event of adding a guest
