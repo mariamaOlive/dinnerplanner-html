@@ -7,6 +7,7 @@ var NumberGuestsView= function (container, model) {
 	this.minusButton= container.find("#minusGuest");
 	this.plusButton= container.find("#plusGuest");
 	this.confirmBtn= container.find("#btnConfirm");
+	this.nextPage= container.parent().find("#pageDinnerOverview");
 
 
 	//it loads on the screen the number of guests
