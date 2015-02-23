@@ -1,6 +1,7 @@
 var RecipeDetailsCtrl = function(view, model){
 	var confirmBtn = view.btnConfirm;
-    
+	var backBtn = view.btnBack;
+
     confirmBtn.click(function(){
 
 
@@ -10,6 +11,18 @@ var RecipeDetailsCtrl = function(view, model){
     	//Going back to the selectDish page
     	view.container.hide();
     	view.nextPage.show();
+
+
+
+    });
+
+
+
+    backBtn.click(function(){
+
+    	view.container.hide();
+    	view.nextPage.show();
+
     });
 
 }
