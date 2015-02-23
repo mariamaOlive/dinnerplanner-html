@@ -8,6 +8,7 @@ var RecipeDetailsView= function (container, model) {
 	var dishDescription = container.find("#dish-intro");
 	var dishPreparation= container.find("#dishPreparation");
 	this.btnConfirm =  container.find("#confirm-btn");
+	this.btnBack= container.find("#back-btn");
 	this.idDish;
 	this.container=container;
 	this.nextPage=container.parent().find("#pageSelectDish");
