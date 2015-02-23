@@ -20,9 +20,9 @@ var dishesOptions=  view.dishesOptionsBtn;
 		view.loadDishes(dishType, text);
 	});
 
-	//Implement the action later of selecting the dish and call the function model.setIdDish();
 
-	dishesOptions.click(function(){
+//Selecting one of the dishes
+	view.container.on('click','div.thumbnail',function(){
 
 		var id=parseInt($(this).attr("id"));
 		model.setDishId(id);
