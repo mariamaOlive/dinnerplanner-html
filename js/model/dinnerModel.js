@@ -5,7 +5,8 @@ var DinnerModel = function() {
 	// and selected dinner options for dinner menu
 	var numberOfGuests;
 	var menu = [];
-	var dishId;
+	var dishId= false;
+	var pedingDish;
 	
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
@@ -102,6 +103,18 @@ var DinnerModel = function() {
 		return priceByRecipe;
 	}
 
+	this.getPriceByRecipe =  function(id){
+		
+		var price=0;
+		var recipeIngredients= this.getDish(id).ingredients;
+
+			for(var j=0; j< recipeIngredients.length; j++){
+				price+=recipeIngredients[j].price;
+			}
+			
+			return price;
+	}
+
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
@@ -150,11 +163,20 @@ var DinnerModel = function() {
 	//method triggered when a dish is selected from the selectDish page
 	this.setDishId= function(id){
 		dishId= id;
+		pedingDish=true;
 		this.notifyObservers();
 	}
 
 	this.getDishId= function(){
 		return dishId;
+	}
+
+	this.getListStatus= function(){
+		return pedingDish;
+	}
+
+	this.setListStatus = function(status){
+		pedingDish=status;
 	}
 
 

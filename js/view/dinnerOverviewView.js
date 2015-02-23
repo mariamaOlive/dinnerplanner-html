@@ -32,6 +32,8 @@ var DinnerOverviewView= function (container, model) {
 				"</div>");	
 		}	
 
+		
+
 		//It loads the total cost of the menu on the screen
 		costScreen.html("<p>Total: "+totalCost+" SEK</p>");
 

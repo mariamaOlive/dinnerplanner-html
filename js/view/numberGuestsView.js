@@ -38,7 +38,28 @@ var NumberGuestsView= function (container, model) {
 
 		}
 
-		finalCostScreen.html("<p id='finalCostText'>"+model.getTotalMenuPrice()+"</p>");
+		var valuePending;
+		
+		//Resolve the situation if a dish is selected but it is still pending 
+		if(model.getListStatus()){
+			//if it is still pending in recipeDetail page
+			var dishId=model.getDishId();
+			valuePending=model.getPriceByRecipe(dishId)*model.getNumberOfGuests();
+			
+		}else{
+			//back to the dishList 
+			valuePending=0;
+
+		}
+
+		//Pending values inserted in the html tree
+		dishListScreen.append("<p>Pending</p>");
+		//add on the html file the price of each dish multipled by the number of guests
+		costListScreen.append("<p>"+valuePending+"</p>");
+
+		var totalCost=model.getTotalMenuPrice()+valuePending;
+		//Final cost of the dinner
+		finalCostScreen.html("<p id='finalCostText'>SEK "+totalCost+"</p>");
 	}
 
 	this.update= function(){
