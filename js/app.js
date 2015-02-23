@@ -17,5 +17,6 @@ $(function() {
 	var selectDishCtrl= new SelectDishCtrl(selectDishView,model);
 	var receipeDetailsCtrl= new RecipeDetailsCtrl(recipeDetailsView,model);
 	var dinnerOverviewCtrl= new DinnerOverviewCtrl(dinnerOverviewView,model);
+	var dinnerpreparationCtrl= new DinnerpreparationCtrl(dinnerPreparationView,model);
 
 });

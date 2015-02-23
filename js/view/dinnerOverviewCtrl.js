@@ -13,7 +13,7 @@ var DinnerOverviewCtrl= function(view, model){
 	printBtn.click(function(){
 
 		view.container.hide();
-		view.nextpage.show();
+		view.nextPage.show();
 
 
 	});
