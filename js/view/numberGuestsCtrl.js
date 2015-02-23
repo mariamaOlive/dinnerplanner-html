@@ -13,7 +13,7 @@ var confirmBtn=view.confirmBtn;
 
 	 confirmBtn.click(function(){
 
-	    	view.container.hide();
+	    	view.containerParent.hide();
 	    	view.nextPage.show();
 
 	 });

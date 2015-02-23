@@ -3,14 +3,9 @@ var HomeCtrl = function(view, model){
 
 	view.btnCreateDinner.click(function(){
     
-       show(view.container, view.nextPage);
+    	view.container.hide();
+    	view.nextPage.show();
+    	view.nextPage2.show();
 
-	});
-
-	var show= function(shown, hidden){
-
-		shown.hide();
-		hidden.show();
-	}
-	
+	});	
 }

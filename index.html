@@ -38,6 +38,8 @@
 		</div>
 	</div>
 
+
+
 	<!--selectDish page-->
 	<div id="pageSelectDish">
 		<div id="header">
@@ -76,7 +78,9 @@
 							<button class="btn btn-default" type="button" id="btnConfirm">Confirm Dinner</button>
 						</div>
 					</div>
-					<div class="col-md-9" id="right-info">
+
+					<!--selectDish-->
+					<div class="col-md-9" id="selectDishList">
 						<div class="search">
 							<p>SELECT DISH</p>
 							<hr>
@@ -106,6 +110,47 @@
 						<div id="dishesOptions" class="row">
 						</div>
 					</div>
+
+					<!--recipe Details-->
+					<div class="col-md-9" id="recipeDetails">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="title" id="dish-name">
+									<!--Div resposible for showing the name of the selected dish-->
+								</div>
+								<div class="image" id="dish-image">
+									<!--Div resposible for showing the picture of the selected dish-->
+								</div>
+								<div class="intro" id="dish-intro">
+									<!--Div resposible for showing the description of the selected dish-->
+								</div>
+								<div class="button">
+									<button class="btn btn-default" type="button" id="back-btn">back to Select Dish</button>      
+								</div>
+								<div id="dishPreparation">					
+								</div>
+							</div>
+							<div class="col-md-6" id="ingredients">
+								<div class="title" id="title-list">
+								</div>
+								<hr>
+								<div class="list" id="ingre-list">
+								</div>
+								<hr>
+								<div class="row" id="total-cost">
+									<div class="col-md-8">
+										<div class="button">
+											<button class="btn btn-default" type="button" id="confirm-btn">Confirm Dish</button>
+										</div>
+
+									</div>
+									<div class="col-md-2">SEK</div>
+									<div class="col-md-2" id="total-costNumber"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>		
 			</div>
 		</div>
@@ -194,93 +239,6 @@
 			</div>
 		</div>
 	</div>
-
-
-	<!--page recipe Details-->
-	<div id="pageRecipeDetails">
-		<div id="header">
-			<p>
-				<span id="title">HOMELETTE</span>
-				<span id="subtitle">From the best chefs in the world directly into your kichen</span>
-			</p>
-		</div>
-		<div class="middle">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-3" id="left-cost">
-						<div id="guests">
-							<h4>My Dinner</h4>
-							<div>
-								People:
-								<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-								<span id="numberOfGuests">X</span>
-								<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
-							</div>
-						</div>
-						<div id="nameCost">
-							<p  class="dishName">Dish Name</p>
-							<p  class="cost">Cost</p>
-						</div>
-						<div>
-							<div class="row">
-								<div class="col-xs-9" id="dishList">
-								</div>
-								<div class="col-xs-3" id="costList">
-								</div>
-							</div>
-							<hr>
-							<div id="finalCost">
-							</div>
-							<button class="btn btn-default" type="button">Confirm Dinner</button>
-						</div>
-					</div>
-					<div class="col-md-9" id="right-info">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="title" id="dish-name">
-									<!--Div resposible for showing the name of the selected dish-->
-								</div>
-								<div class="image" id="dish-image">
-									<!--Div resposible for showing the picture of the selected dish-->
-								</div>
-								<div class="intro" id="dish-intro">
-									<!--Div resposible for showing the description of the selected dish-->
-								</div>
-								<div class="button">
-									<button class="btn btn-default" type="button" id="back-btn">back to Select Dish</button>      
-								</div>
-								<div id="dishPreparation">					
-								</div>
-							</div>
-							<div class="col-md-6" id="ingredients">
-								<div class="title" id="title-list">
-								</div>
-								<hr>
-								<div class="list" id="ingre-list">
-								</div>
-								<hr>
-								<div class="row" id="total-cost">
-									<div class="col-md-8">
-										<div class="button">
-											<button class="btn btn-default" type="button" id="confirm-btn">Confirm Dish</button>
-										</div>
-
-									</div>
-									<div class="col-md-2">SEK</div>
-									<div class="col-md-2" id="total-costNumber"></div>
-								</div>
-							</div>
-						</div>
-
-						<div id="dishesOptions" class="row">
-							<!--Div resposible for showing the available dishes-->
-						</div>
-					</div>
-				</div>		
-			</div>
-		</div>
-	</div>
-
 
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery.js"></script>

@@ -1,12 +1,12 @@
-//ExampleView Object constructor
 var SelectDishView= function (container, model) {
 	
 	this.dishesOptions = container.find("#dishesOptions");
 	this.dropdownMenu = container.find(".dropdown");
 	this.searchBox =  container.find("#searchBox");
-	this.container=container;
-	this.nextPage= container.parent().find("#pageRecipeDetails");
+	this.container=container.find("#selectDishList");
+	this.nextPage= container.parent().find("#recipeDetails");
 	this.dishesOptionsBtn;
+	this.container=container.find("#selectDishList");
 
 
 

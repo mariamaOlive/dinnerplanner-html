@@ -5,11 +5,11 @@ $(function() {
 	//And create the needed controllers and views
 	//views
     var homeView= new HomeView($("#pageHome"),model);
-	var selectDishView = new SelectDishView($("#pageSelectDish"),model);
-	var numberGuestsView =  new NumberGuestsView($("#pageSelectDish"),model);
+	var selectDishView = new SelectDishView($("#selectDishList"),model);
+	var numberGuestsView =  new NumberGuestsView($("#left-cost"),model);
 	var dinnerPreparationView= new DinnerPreparationView($("#pageDinnerPreparation"), model);
 	var dinnerOverviewView= new DinnerOverviewView($("#pageDinnerOverview"), model);
-	var recipeDetailsView= new RecipeDetailsView($("#pageRecipeDetails"), model);
+	var recipeDetailsView= new RecipeDetailsView($("#recipeDetails"), model);
 
 	//controllers
 	var homeCtrl= new HomeCtrl(homeView, model);

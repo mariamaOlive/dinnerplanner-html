@@ -87,8 +87,8 @@ var DinnerModel = function() {
 		var auxArray= new Array();
 		var dishesMenu= this.getFullMenu();
 
-		for(var i=0; i<dishes.length; i++){
-			auxArray.push(dishes[i].ingredients);
+		for(var i=0; i<dishesMenu.length; i++){
+			auxArray.push(dishesMenu[i].ingredients);
 		}
 
 		for (var i = 0; i< auxArray.length; i++) {
@@ -390,7 +390,7 @@ var DinnerModel = function() {
 			'price':4
 			}]
 		},{
-		'id':102,
+		'id':103,
 		'name':'MD 4',
 		'type':'main dish',
 		'image':'meatballs.jpg',

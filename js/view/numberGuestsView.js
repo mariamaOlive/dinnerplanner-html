@@ -9,6 +9,7 @@ var NumberGuestsView= function (container, model) {
 	this.confirmBtn= container.find("#btnConfirm");
 	this.nextPage= container.parent().find("#pageDinnerOverview");
 	this.container=container;
+	this.selectDishList=container.parent().find("#selectDishList");
 
 
 	//it loads on the screen the number of guests
@@ -46,7 +47,7 @@ var NumberGuestsView= function (container, model) {
 
 	//First time that the view is initialised add an observer and set the number of guest to 0
 	model.addObserver(this);
-	numberOfGuests= model.setNumberOfGuests(0);
+	numberOfGuests= model.setNumberOfGuests(1);
 	container.hide();
 
 }

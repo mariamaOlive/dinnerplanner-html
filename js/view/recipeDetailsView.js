@@ -11,7 +11,7 @@ var RecipeDetailsView= function (container, model) {
 	this.btnBack= container.find("#back-btn");
 	this.idDish;
 	this.container=container;
-	this.nextPage=container.parent().find("#pageSelectDish");
+	this.nextPage=container.parent().find("#selectDishList");
 
 	
 
@@ -37,11 +37,12 @@ var RecipeDetailsView= function (container, model) {
 		//This code loads the content of the left layout related to the ingredients of the recipe
 		numberOfGuestsScreen.html("<p><h5>INGREDIENTS FOR "+model.getNumberOfGuests()+" PEOPLE</h5></p>");
 		
+		dishIngredientsScreen.html("");
 		//it loads recipe ingredients
 		for(key in dishIngredients){
 
 			totalCost+=dishIngredients[key].price;
-			dishIngredientsScreen.html("");
+
 			dishIngredientsScreen.append("<div class='row' id='dish-list'>"+
 											"<div class='col-md-3'>"+dishIngredients[key].quantity+" "+dishIngredients[key].unit+"</div>"+
 											"<div class='col-md-5'>"+dishIngredients[key].name+"</div>"+
