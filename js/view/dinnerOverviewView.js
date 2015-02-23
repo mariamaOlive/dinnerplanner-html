@@ -28,12 +28,12 @@ var DinnerOverviewView= function (container, model) {
 				"'><div class='caption'>"+
 				"<h3>"+dishList[i].name+"</h3>"+
 				"</div></div>"+
-				"<p class='rightText'>"+dishCost[i]+"</p>"+
+				"<p class='rightText'>"+dishCost[i]*model.getNumberOfGuests()+" SEK</p>"+
 				"</div>");	
 		}	
 
 		//It loads the total cost of the menu on the screen
-		costScreen.html("<p>Total: "+totalCost+"</p>");
+		costScreen.html("<p>Total: "+totalCost+" SEK</p>");
 
 	}
 

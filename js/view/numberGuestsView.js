@@ -7,9 +7,10 @@ var NumberGuestsView= function (container, model) {
 	this.minusButton= container.find("#minusGuest");
 	this.plusButton= container.find("#plusGuest");
 	this.confirmBtn= container.find("#btnConfirm");
-	this.nextPage= container.parent().find("#pageDinnerOverview");
+
+	this.nextPage= container.closest("body").find("#pageDinnerOverview");
 	this.container=container;
-	this.selectDishList=container.parent().find("#selectDishList");
+	this.pageSelectDish=container.closest("#pageSelectDish");
 
 
 	//it loads on the screen the number of guests

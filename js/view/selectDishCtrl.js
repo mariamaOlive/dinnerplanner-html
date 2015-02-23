@@ -22,7 +22,7 @@ var dishesOptions=  view.dishesOptionsBtn;
 
 
 //Selecting one of the dishes
-	view.container.on('click','div.thumbnail',function(){
+	view.container.on("click","div.thumbnail",function(){
 
 		var id=parseInt($(this).attr("id"));
 		model.setDishId(id);

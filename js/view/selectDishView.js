@@ -6,7 +6,7 @@ var SelectDishView= function (container, model) {
 	this.container=container.find("#selectDishList");
 	this.nextPage= container.parent().find("#recipeDetails");
 	this.dishesOptionsBtn;
-	this.container=container.find("#selectDishList");
+	this.container=container;
 
 
 
