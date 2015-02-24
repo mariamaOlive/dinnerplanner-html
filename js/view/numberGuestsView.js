@@ -35,8 +35,11 @@ var NumberGuestsView= function (container, model) {
 								<div class='col-xs-8' id='dishList'>\
 									<p>"+numberOfGuests+"  "+dishList[i].name+"</p>\
 								</div>\
-								<div class='col-xs-4' id='costList'>\
+								<div class='col-xs-2' id='costList'>\
 									<p>"+priceList[i]*numberOfGuests+"</p>\
+								</div>\
+								<div class='col-xs-2' id='excludeIcon'>\
+									<span class='glyphicon glyphicon-remove-circle'></span>\
 								</div>\
 							</div>");
 		}

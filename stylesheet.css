@@ -177,7 +177,17 @@ hr{
 	text-align: right;
 }
 
+.itemMenu{
+	padding-top: 7px;
+}
 
+.itemMenuHover{
+	background-color: gray;
+}
+
+#excludeIcon{
+	display: none;
+}
 
 #btnConfirm{
 	display: block;
