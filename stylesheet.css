@@ -88,6 +88,11 @@ body{
 	text-align: center;
 }
 
+.dishPic{
+	cursor: pointer;
+	cursor: hand;
+}
+
 /*dinner_overview*/
 #left-info{
 	background: rgba(255, 255, 255, 0.7);	
@@ -178,15 +183,17 @@ hr{
 }
 
 .itemMenu{
-	padding-top: 7px;
+	padding-top: 10px;
 }
 
 .itemMenuHover{
-	background-color: gray;
+	background: rgba(255, 204, 0, 0.6);
 }
 
-#excludeIcon{
+.glyphicon-remove-circle{
 	display: none;
+	cursor: pointer; 
+	cursor: hand;
 }
 
 #btnConfirm{

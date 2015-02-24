@@ -31,15 +31,15 @@ var NumberGuestsView= function (container, model) {
 
 		for(var i=0; i<dishList.length; i++){
 			dishListEnd.before(
-							"<div class='row itemMenu'>\
+							"<div class='row itemMenu' >\
 								<div class='col-xs-8' id='dishList'>\
 									<p>"+numberOfGuests+"  "+dishList[i].name+"</p>\
 								</div>\
 								<div class='col-xs-2' id='costList'>\
 									<p>"+priceList[i]*numberOfGuests+"</p>\
 								</div>\
-								<div class='col-xs-2' id='excludeIcon'>\
-									<span class='glyphicon glyphicon-remove-circle'></span>\
+								<div class='col-xs-2'>\
+									<span id='"+dishList[i].id+"' class='glyphicon glyphicon-remove-circle'></span>\
 								</div>\
 							</div>");
 		}

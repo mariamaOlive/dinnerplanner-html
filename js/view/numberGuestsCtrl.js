@@ -19,27 +19,23 @@ var itemList= view.container.find(".itemMenu");
 
 	 });
 
-	 view.container.on("mouseenter",".itemMenu",function(){
+	view.container.on("mouseenter",".itemMenu",function(){
 
 		$(this).toggleClass("itemMenuHover" );
+		$(this).find(".glyphicon-remove-circle").css("display", "block");
         
 	});
 
 	view.container.on("mouseleave",".itemMenu",function(){
 
 		$(this).toggleClass("itemMenuHover" );
+		$(this).find(".glyphicon-remove-circle").css("display", "none");
         
 	});
 
-	 //itemList.hover(function(){
-
-	 	
-
-	 //},function(){
-
-
-	 //});
-
-
+	view.container.on("click", ".glyphicon-remove-circle", function(){
+		var id=parseInt($(this).attr("id"));
+		model.removeDishFromMenu(id);
+	});
 
 }
