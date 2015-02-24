@@ -1,7 +1,8 @@
 var NumberGuestsView= function (container, model) {
 	
-	var dishListScreen= container.find("#dishList");
+	var dishListEnd= container.find("hr");
 	var costListScreen= container.find("#costList");
+	var itensMenuScreen = container.find("#listMenu")
 	var finalCostScreen= container.find("#finalCost");
 	var numberOfGuestsScreen = container.find("#numberOfGuests");
 	this.minusButton= container.find("#minusGuest");
@@ -25,17 +26,19 @@ var NumberGuestsView= function (container, model) {
 		var dishList = model.getFullMenu();
 		var priceList= model.getMenuPriceByRecipe();
 
-		dishListScreen.html("");
-		costListScreen.html("");
-
+		var oldItens= container.find(".itemMenu");
+		oldItens.remove();
 
 		for(var i=0; i<dishList.length; i++){
-
-			dishListScreen.append("<p>"+numberOfGuests+"  "+dishList[i].name+"</p>");
-
-			//add on the html file the price of each dish multipled by the number of guests
-			costListScreen.append("<p>"+priceList[i]*numberOfGuests+"</p>");
-
+			dishListEnd.before(
+							"<div class='row itemMenu'>\
+								<div class='col-xs-8' id='dishList'>\
+									<p>"+numberOfGuests+"  "+dishList[i].name+"</p>\
+								</div>\
+								<div class='col-xs-4' id='costList'>\
+									<p>"+priceList[i]*numberOfGuests+"</p>\
+								</div>\
+							</div>");
 		}
 
 		var valuePending;
@@ -58,9 +61,9 @@ var NumberGuestsView= function (container, model) {
 		}
 
 		//Pending values inserted in the html tree
-		dishListScreen.append("<p>Pending</p>");
+		//dishListScreen.append("<p>Pending</p>");
 		//add on the html file the price of each dish multipled by the number of guests
-		costListScreen.append("<p>"+valuePending+"</p>");
+		//costListScreen.append("<p>"+valuePending+"</p>");
 
 		var totalCost=model.getTotalMenuPrice()+valuePending;
 		//Final cost of the dinner
