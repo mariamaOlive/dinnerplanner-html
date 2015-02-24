@@ -29,6 +29,9 @@ var NumberGuestsView= function (container, model) {
 		var oldItens= container.find(".itemMenu");
 		oldItens.remove();
 
+		var oldItens= container.find(".pending");
+		oldItens.remove();
+
 		for(var i=0; i<dishList.length; i++){
 			dishListEnd.before(
 							"<div class='row itemMenu' >\
@@ -67,6 +70,15 @@ var NumberGuestsView= function (container, model) {
 		//dishListScreen.append("<p>Pending</p>");
 		//add on the html file the price of each dish multipled by the number of guests
 		//costListScreen.append("<p>"+valuePending+"</p>");
+
+			dishListEnd.before("<div class='row pending' >\
+								<div class='col-xs-8' id='dishList'>\
+									<p>Pending</p>\
+								</div>\
+								<div class='col-xs-2' id='costList'>\
+									<p>"+valuePending+"</p>\
+								</div>\
+							</div>");
 
 		var totalCost=model.getTotalMenuPrice()+valuePending;
 		//Final cost of the dinner
