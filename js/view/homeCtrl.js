@@ -6,6 +6,7 @@ var HomeCtrl = function(view, model){
     	view.container.hide();
     	view.nextPage.show();
     	view.nextPage2.show();
+    	view.nextPage3.show();
 
 	});	
 }

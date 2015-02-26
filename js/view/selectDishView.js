@@ -42,9 +42,11 @@ var SelectDishView= function (container, model) {
      //this.update= function(){
 		//loadDishes();
 	//}
-
 	//model.addObserver(this);
+
+
 	this.loadDishes("starter");
 	container.hide();
+	container.closest("#pageSelectDish").hide();
 
 }
